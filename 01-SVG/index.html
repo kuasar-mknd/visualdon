@@ -14,15 +14,32 @@
 
     <h1>Dessiner des formes</h1>
     <h2>Rectangle</h2>
+    <svg>
+      <rect id="rectangle" width="150" height="100" style="fill:rgb(255,0,0)" />
+    </svg>
 
     <h2>Donut</h2>
-
+    <svg>
+      <g transform='translate(10, 15)'>
+        <circle cx="50" cy="50" r="60" fill='none' stroke='black' ></circle>
+        <circle cx="50" cy="50" r="30" fill="none" stroke='black' id="donut" ></circle>
+      </g>
+    </svg>
 
     <h2>Ligne</h2>
-
+    <svg>
+      <line x1="20" y1="50" x2="80" y2="47" stroke="blue" stroke-width="2"></line>
+    </svg>
 
     <h2>Path</h2>
-
+    <svg>
+    <path d="M 100 10 H10 V50 H100 V100 H10 " fill="none" stroke="steelblue" stroke-width="5" id="firstLetter"></path>
+      <circle r="5" fill="red">
+        <animateMotion dur="1.5s" repeatCount="indefinite">
+          <mpath xlink:href="#firstLetter" />
+        </animateMotion>
+        </circle>
+      </svg>
 
     <h1>Animer des formes</h1>
 
@@ -31,7 +48,7 @@
     <h2>On hover</h2>
 
     <h2>Prenez la première lettre de votre prénom que vous avez créée ci-dessus. Faite bouger une forme de votre choix le long de la lettre</h2>
-
+    <script src="js/script.js"></script>
 
   </body>
 </html>
