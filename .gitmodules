@@ -1,0 +1,3 @@
+[submodule "visualdon-exercices"]
+	path = visualdon-exercices
+	url = https://github.com/romanoe/visualdon-exercices.git
