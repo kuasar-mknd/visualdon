@@ -59,17 +59,16 @@ d3.select("#secondCircle").attr("cx", +d3.select("#secondCircle").attr("cx") + 5
 
 // Alignez verticalement les cercles en cliquant sur le dernier cercle
 d3.select("#thirdCircle").on("click", function() {
-    d3.select("#firstCircle").attr("cx", +d3.select("#thirdCircle").attr("cx"));
-    d3.select("#secondCircle").attr("cx", +d3.select("#thirdCircle").attr("cx"));
+    d3.select("#groupe1").attr("transform", "translate("+(d3.select("#thirdCircle").attr("cx")-d3.select("#firstCircle").attr("cx"))+", 0)");
+    d3.select("#groupe2").attr("transform", "translate("+(d3.select("#thirdCircle").attr("cx")-d3.select("#secondCircle").attr("cx"))+", 0)");
 })
+
 
 // bar chart
 // Vous avez à disposition les données suivantes: [20, 5, 25, 8, 15]
-
 const data = [20, 5, 25, 8, 15]
 const maxVal = d3.max(data)
-//get actual fontsize
-const fontSize = parseInt(d3.select("body").style("font-size"), 10);
+const fontSize = parseInt(d3.select("body").style("font-size"));
 d3.select("body").append("div").attr("class", "barChart");
 const barChart = d3.select(".barChart")
     .append("svg")
