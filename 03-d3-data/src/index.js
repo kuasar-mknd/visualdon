@@ -85,7 +85,7 @@ const displayData = async () => {
     const svg = d3.select('body')
         .append('svg')
         .attr('width', 1000)
-        .attr('height', 1000)
+        .attr('height', 700)
 
     const xScale = d3.scaleBand()
         .domain(postsByUserArray.map(user => user.nom_utilisateur))

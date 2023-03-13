@@ -1,3 +1,6 @@
 [submodule "visualdon-exercices"]
 	path = visualdon-exercices
 	url = https://github.com/romanoe/visualdon-exercices.git
+[submodule "visualdon-projet"]
+	path = visualdon-projet
+	url = https://github.com/kuasar-mknd/visualdon-projet
